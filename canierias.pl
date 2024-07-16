@@ -1,4 +1,4 @@
-%%%%%%%%%%% PUNTO 1
+%%%%%%%%%% PUNTO 1
 precio(Canieria, PrecioTotal):-
     findall(PrecioPieza, (member(Pieza, Canieria), precioPieza(Pieza, PrecioPieza)), Precios),
     sumlist(Precios, PrecioTotal).
@@ -28,4 +28,3 @@ color(canio(Color, _), Color).
 color(canilla(_, Color, _), Color).
 
 sonEnchufables(Color1, Color2) :-
-
