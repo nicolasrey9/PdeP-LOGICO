@@ -56,7 +56,7 @@ condena(Prisionero, Condena):-
     sumlist(PenaPorCrimen, Condena).
 
 pena(robo(Monto), Pena) :- Pena is Monto / 10000.
-pena(homicidio(Muerto), 7) :- guardia(Muerto).
-pena(homicidio(Muerto), 5) :- not(guardia(Muerto)).
+pena(homicidio(Muerto), 9) :- guardia(Muerto).
+pena(homicidio(Muerto), 7) :- not(guardia(Muerto)).
 pena(narcotrafico(Drogas), Pena) :- length(Drogas, Cantidad), Pena is Cantidad * 2.
 
