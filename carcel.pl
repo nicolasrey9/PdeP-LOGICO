@@ -1,4 +1,4 @@
- https://docs.google.com/document/d/12zUNFV4K7Iofc47FN-b7O-gXjTrqgP4dQh47yJVlvw0/edit
+%%% https://docs.google.com/document/d/12zUNFV4K7Iofc47FN-b7O-gXjTrqgP4dQh47yJVlvw0/edit
 
 % guardia(Nombre)
 guardia(bennett).
