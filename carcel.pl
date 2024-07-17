@@ -1,4 +1,4 @@
-%%% https://docs.google.com/document/d/12zUNFV4K7Iofc47FN-b7O-gXjTrqgP4dQh47yJVlvw0/edit
+%% https://docs.google.com/document/d/12zUNFV4K7Iofc47FN-b7O-gXjTrqgP4dQh47yJVlvw0/edit
 
 % guardia(Nombre)
 guardia(bennett).
@@ -60,3 +60,17 @@ pena(homicidio(Muerto), 9) :- guardia(Muerto).
 pena(homicidio(Muerto), 7) :- not(guardia(Muerto)).
 pena(narcotrafico(Drogas), Pena) :- length(Drogas, Cantidad), Pena is Cantidad * 2.
 
+
+
+capo(Capo):-
+    prisionero(Capo, _),
+    not(controla(_, Capo)),
+    forall(persona(Persona), controlaDirectaOIndirectamente(Capo, Persona)).
+
+controlaDirectaOIndirectamente(Dominador, Dominado):- controla(Dominador, Dominado).
+controlaDirectaOIndirectamente(Dominador, Dominado):- 
+    controlaDirectaOIndirectamente(Dominador, Intermediario), 
+    controlaDirectaOIndirectamente(Intermediario, Dominado).
+
+persona(Persona):- prisionero(Persona, _).
+persona(Persona):- guardia(Persona).
