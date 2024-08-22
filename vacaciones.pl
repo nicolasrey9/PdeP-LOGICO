@@ -101,6 +101,7 @@ itinerariosPosibles(Persona, Itinerario):-
     armarItinerario(Destinos, CantidadDeDestinos, Itinerario).
     
 armarItinerario(Destinos, Cantidad, Itinerario):-
-    (forall(member(Miembro, Destinos), member(Miembro, Itinerario)),
-    length(Itinerario, Cantidad)).
+    length(Itinerario, Cantidad),
+    member(Miembro, Itinerario), 
+    member(Miembro, Destinos).
 
