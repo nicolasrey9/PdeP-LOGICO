@@ -1,4 +1,4 @@
-mago(harry, sangre(mestiza), [coraje, amistoso, orgullo, inteligencia]).
+ago(harry, sangre(mestiza), [coraje, amistoso, orgullo, inteligencia]).
 mago(draco, sangre(pura), [orgullo, inteligencia]).
 mago(hermione, sangre(impura), [orgullo, inteligencia, responsabilidad]).
 
